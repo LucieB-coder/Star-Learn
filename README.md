@@ -6,7 +6,7 @@ geometry: margin=2cm
 
 # StarLearn
 
-## Exo 1)
+## Exo 1)
 - [X] Traitement des valeurs manquantes
 - [ ] Echantillonnage dans le cas de classes déséquilibrées
 - [ ] Normalisation des données (MinMax ou standardisation)
