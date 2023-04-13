@@ -13,7 +13,7 @@ geometry: margin=2cm
 - [ ] Numérisation des colonnes
 - [ ] Traduction des données, etc.
 
-## Exo 2)
+## Exo 2)
 - [ ] Réduction de dimension ou Sélection de dimensions
 
 ## Exo 3)
