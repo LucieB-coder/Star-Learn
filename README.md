@@ -22,7 +22,7 @@ geometry: margin=2cm
 ## Exo 4)
 - [ ] Evaluation des modèles via les métriques de validation adéquates
 
-## Exo 5)
+## Exo 5)
 **Interface utilisateur** qui permet de :
 - [ ] Téléverser ou de saisir un nouvel objet à classer.
 - [ ] Afficher les résultats de classification de l’objet, donnés par chacun des 3 modèles.
