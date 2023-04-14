@@ -12,9 +12,17 @@ df.dropna(inplace=True) # On supprime les lignes contenant des valeurs manquante
 
 
 
-# Traitement des valeurs manquantes
-imputer = SimpleImputer(missing_values=np.nan, strategy='mean')
-data = imputer.fit_transform(data)
+### Traitement des données 
+# Transformation des flags en Booleen
+df["koi_fpflag_nt"] = df["koi_fpflag_nt"].map({1: True, 0: False})
+df["koi_fpflag_ss"] = df["koi_fpflag_ss"].map({1: True, 0: False})
+df["koi_fpflag_co"] = df["koi_fpflag_co"].map({1: True, 0: False})
+df["koi_fpflag_ec"] = df["koi_fpflag_ec"].map({1: True, 0: False})
+
+
+
+
+
 
 # Echantillonnage dans le cas de classes déséquilibrées
 data_majority = data[data["class"] == "majority"]
