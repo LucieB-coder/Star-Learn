@@ -7,7 +7,7 @@ df = pd.read_csv('../../File/exoplanets.csv')
 
 #  On traite les valeurs manquantes et les colonnes inutiles
 df.dropna( how='all', axis=1, inplace=True)  # On supprime les colonnes contenant que des valeurs manquantes
-df.drop(columns=["kepid","kepoi_name","kepler_name"], inplace=True) # On supprime les colonnes inutiles
+df.drop(columns=["kepid","kepoi_name","kepler_name", "koi_pdisposition"], inplace=True) # On supprime les colonnes inutiles
 df.dropna(inplace=True) # On supprime les lignes contenant des valeurs manquantes
 
 
