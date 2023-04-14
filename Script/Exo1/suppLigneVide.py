@@ -4,12 +4,13 @@ import pandas as pd
 # Charger le fichier CSV dans un dataframe
 df = pd.read_csv('../../File/exoplanets.csv')
 
-# Supprimer les lignes avec des valeurs manquantes
-df = df.dropna()
+
+#  On traite les valeurs manquantes et les colonnes inutiles
+df.dropna( how='all', axis=1, inplace=True)  # On supprime les colonnes contenant que des valeurs manquantes
+df.drop(columns=["kepid","kepoi_name","kepler_name"], inplace=True) # On supprime les colonnes inutiles
+df.dropna(inplace=True) # On supprime les lignes contenant des valeurs manquantes
 
 
-# Suppression des colonnes inutiles
-# data = data.drop(["col1", "col2", ...], axis=1)
 
 # Traitement des valeurs manquantes
 imputer = SimpleImputer(missing_values=np.nan, strategy='mean')
