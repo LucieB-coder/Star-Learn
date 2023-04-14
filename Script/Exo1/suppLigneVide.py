@@ -20,6 +20,19 @@ df["koi_fpflag_co"] = df["koi_fpflag_co"].map({1: True, 0: False})
 df["koi_fpflag_ec"] = df["koi_fpflag_ec"].map({1: True, 0: False})
 
 
+for i in df.columns :
+    print(i)
+    # print(df[i])
+    if df[i].dtype == "float64" :
+        print("Min : ", df[i].min())
+        print("Max : ", df[i].max())
+        print("Moyenne : ", df[i].mean())
+        print("1er quartile : ", df[i].quantile(0.25))
+        print("Médiane : ", df[i].median())
+        print("3ème quartile : ", df[i].quantile(0.75))
+    else :
+        print("### Pas un float ###")
+    print()
 
 
 
