@@ -2,23 +2,21 @@
 import pandas as pd
 
 # Charger le fichier CSV dans un dataframe
-df = pd.read_csv('../../File/exoplanets.csv')
+df = pd.read_csv('starlearn-main/File/exoplanets.csv')
 
 
 #  On traite les valeurs manquantes et les colonnes inutiles
 df.dropna( how='all', axis=1, inplace=True)  # On supprime les colonnes contenant que des valeurs manquantes
-df.drop(columns=["kepid","kepoi_name","kepler_name", "koi_pdisposition"], inplace=True) # On supprime les colonnes inutiles
+df.drop(columns=["kepid","kepoi_name","kepler_name", "koi_pdisposition","koi_tce_delivname"], inplace=True) # On supprime les colonnes inutiles
 df.dropna(inplace=True) # On supprime les lignes contenant des valeurs manquantes
 
 
 
 ### Traitement des données 
-# Transformation des flags en Booleen
-df["koi_fpflag_nt"] = df["koi_fpflag_nt"].map({1: True, 0: False})
-df["koi_fpflag_ss"] = df["koi_fpflag_ss"].map({1: True, 0: False})
-df["koi_fpflag_co"] = df["koi_fpflag_co"].map({1: True, 0: False})
-df["koi_fpflag_ec"] = df["koi_fpflag_ec"].map({1: True, 0: False})
-
+# On transforme les valeurs de la colonne koi_disposition en entier
+df["koi_disposition"] = df["koi_disposition"].map(
+    {"CONFIRMED": 1, "FALSE POSITIVE": 0, "CANDIDATE": 2}
+)
 
 for i in df.columns :
     print(i)
