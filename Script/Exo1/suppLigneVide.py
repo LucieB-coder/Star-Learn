@@ -73,11 +73,6 @@ def translate_language(row):
 data = data.apply(translate_language, axis=1)
 
 
-
-# Enregistrer le nouveau dataframe dans un fichier CSV
-#df.to_csv('nouveau_nom_du_fichier.csv', index=False)
-
-
 # Diviser le dataset en training en test set
 X = df.drop('koi_disposition', axis=1)
 y = df['koi_disposition']
@@ -90,3 +85,13 @@ rus = RandomUnderSampler(random_state=42)
 X_train_rus, y_train_rus= rus.fit_resample(X_train, y_train)
 # Check the number of records after under sampling
 print("Nombre d'occurence dans chaque classe (après undersampling): ", sorted(Counter(y_train_rus).items()))
+print(X_train_rus,y_train_rus)
+
+datasetFinal = X_train_rus
+datasetFinal['koi_disposition'] = y_train_rus
+# Mélanger les lignes
+datasetFinal = datasetFinal.sample(frac=1, random_state=np.random.seed(42))
+print(datasetFinal)
+
+# Exporter le nouveau dataset au format csv
+datasetFinal.to_csv('exoplanetsExo1.csv', index=False)
