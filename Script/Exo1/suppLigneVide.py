@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 from imblearn.under_sampling import RandomUnderSampler
 from collections import Counter
+from sklearn.preprocessing import MinMaxScaler
 from sklearn.model_selection import train_test_split
 
 # Charger le fichier CSV dans un dataframe
@@ -30,6 +31,7 @@ for i in df.columns :
 
 
 for i in df.columns :
+    break
     print(i)
     # print(df[i])
     if df[i].dtype == "float64" :
@@ -43,34 +45,6 @@ for i in df.columns :
         print("### Pas un float ###")
     print()
 
-
-
-
-# Echantillonnage dans le cas de classes déséquilibrées
-data_majority = data[data["class"] == "majority"]
-data_minority = data[data["class"] == "minority"]
-data_minority_upsampled = resample(data_minority, replace=True, n_samples=len(data_majority), random_state=123)
-data = pd.concat([data_majority, data_minority_upsampled])
-
-# Normalisation des données (MinMax ou standardisation)
-scaler = MinMaxScaler() # ou scaler = StandardScaler()
-data_scaled = scaler.fit_transform(data)
-
-# Numérisation des colonnes
-le = LabelEncoder()
-data["column"] = le.fit_transform(data["column"])
-
-# Traduction des données
-def translate_language(row):
-    try:
-        lang = detect(row["text"])
-        if lang != "en":
-            row["text"] = translate_function(row["text"], lang)
-            return row
-    except:
-            return row
-
-data = data.apply(translate_language, axis=1)
 
 
 
