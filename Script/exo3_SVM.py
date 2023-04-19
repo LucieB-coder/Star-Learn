@@ -5,8 +5,8 @@ from sklearn.metrics import accuracy_score
 import pandas as pd
 
 # Charger les données
-data = pd.read_csv('File/exoplanetsExo1.csv')
-dataTest = pd.read_csv('File/exoplanetsExo1Test.csv')
+data = pd.read_csv('File/exoplanetsExo2.csv')
+dataTest = pd.read_csv('File/exoplanetsExo2Test.csv')
 
 # Separer les données en X et y
 X_train = data.drop('koi_disposition', axis=1)
