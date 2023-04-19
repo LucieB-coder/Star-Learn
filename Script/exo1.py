@@ -8,7 +8,7 @@ from sklearn.model_selection import train_test_split
 
 # Charger le fichier CSV dans un dataframe
 
-df = pd.read_csv('starlearn-main/File/exoplanets.csv')
+df = pd.read_csv('File/exoplanets.csv')
 
 
 #  On traite les valeurs manquantes et les colonnes inutiles
@@ -57,13 +57,22 @@ rus = RandomUnderSampler(random_state=42)
 X_train_rus, y_train_rus= rus.fit_resample(X_train, y_train)
 # Check the number of records after under sampling
 print("Nombre d'occurence dans chaque classe (après undersampling): ", sorted(Counter(y_train_rus).items()))
-print(X_train_rus,y_train_rus)
+# print(X_train_rus,y_train_rus)
 
 datasetFinal = X_train_rus
 datasetFinal['koi_disposition'] = y_train_rus
 # Mélanger les lignes
 datasetFinal = datasetFinal.sample(frac=1, random_state=np.random.seed(42))
-print(datasetFinal)
+# print(datasetFinal)
 
 # Exporter le nouveau dataset au format csv
-datasetFinal.to_csv('exoplanetsExo1.csv', index=False)
+datasetFinal.to_csv('File/exoplanetsExo1.csv', index=False)
+
+datasetFinalTest = X_train_rus
+datasetFinalTest['koi_disposition'] = y_train_rus
+# Mélanger les lignes
+datasetFinalTest = datasetFinalTest.sample(frac=1, random_state=np.random.seed(42))
+# print(datasetFinalTest)
+
+# Exporter le nouveau dataset au format csv
+datasetFinalTest.to_csv('File/exoplanetsExo1Test.csv', index=False)
