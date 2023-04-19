@@ -8,16 +8,19 @@ geometry: margin=2cm
 
 ## Exo 1)
 - [X] Traitement des valeurs manquantes
-- [ ] Echantillonnage dans le cas de classes déséquilibrées
-- [ ] Normalisation des données (MinMax ou standardisation)
-- [ ] Numérisation des colonnes
-- [ ] Traduction des données, etc.
+- [X] Echantillonnage dans le cas de classes déséquilibrées
+- [X] Normalisation des données (MinMax ou standardisation)
+- [X] Numérisation des colonnes
+- [X] Traduction des données, etc.
 
 ## Exo 2)
-- [ ] Réduction de dimension ou Sélection de dimensions
+- [X] Réduction de dimension ou Sélection de dimensions
 
 ## Exo 3)
-- [ ] Utilisation de trois modèles de classification de votre choix. Vous pouvez utiliser des classificateurs Machine Learning ou Deep Learning. Préciser la stratégie de validation utilisée (k-fold, training/test, etc.)
+- [ ] Utilisation de trois modèles de classification de votre choix. Vous pouvez utiliser des classificateurs Machine Learning ou Deep Learning. Préciser la stratégie de validation utilisée (k-fold, training/test, etc.).
+- [ ] K Plus Proches Voisins 
+- [ ] SVM
+- [ ] CVFDT
 
 ## Exo 4)
 - [ ] Evaluation des modèles via les métriques de validation adéquates
