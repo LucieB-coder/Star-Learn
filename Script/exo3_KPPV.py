@@ -15,7 +15,7 @@ X_test = dataTest.drop('koi_disposition', axis=1)
 y_test = dataTest['koi_disposition']
 
 # Initialisation du classificateur KNN avec un nombre de voisins égal à 5
-knn = KNeighborsClassifier(n_neighbors=5)
+knn = KNeighborsClassifier(n_neighbors=3)
 
 # Entraînement du classificateur sur les données d'apprentissage
 knn.fit(X_train, y_train)
@@ -26,4 +26,4 @@ y_pred = knn.predict(X_test)
 # Calcul de l'exactitude (accuracy) du modèle
 accuracy = accuracy_score(y_test, y_pred)
 
-print("Exactitude (accuracy) du modèle : {:.2f}%".format(accuracy * 100))
+print(f"Exactitude (accuracy) du modèle : {accuracy * 100:.2f}%")
