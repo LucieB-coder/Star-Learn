@@ -1,5 +1,5 @@
 from sklearn.ensemble import RandomForestClassifier
-
+import joblib
 from sklearn.metrics import accuracy_score
 from datetime import datetime
 import pandas as pd
@@ -28,3 +28,9 @@ y_pred = rfc.predict(X_test)
 # Évaluer les performances du modèle en utilisant l'exactitude
 accuracy = accuracy_score(y_test, y_pred)
 print(f'Exactitude du modèle : {accuracy*100:.2f}%')
+
+
+# Sauvegarde du modèle
+joblib.dump(rfc, 'SiteWeb/ia/rfc.pkl')
+
+
