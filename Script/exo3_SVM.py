@@ -1,6 +1,6 @@
 from sklearn.model_selection import train_test_split
 from sklearn import svm
-
+import joblib
 from sklearn.metrics import accuracy_score
 import pandas as pd
 
@@ -25,3 +25,5 @@ y_pred = clf.predict(X_test)
 accuracy = accuracy_score(y_test, y_pred)
 print(f"Accuracy: {accuracy:.2%}")
 
+# Sauvegarde du modèle
+joblib.dump(clf, 'SiteWeb/ia/svm.pkl')
