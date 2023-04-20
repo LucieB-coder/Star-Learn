@@ -17,13 +17,13 @@ geometry: margin=2cm
 - [X] Réduction de dimension ou Sélection de dimensions
 
 ## Exo 3)
-- [ ] Utilisation de trois modèles de classification de votre choix. Vous pouvez utiliser des classificateurs Machine Learning ou Deep Learning. Préciser la stratégie de validation utilisée (k-fold, training/test, etc.).
-- [ ] K Plus Proches Voisins 
-- [ ] SVM
-- [ ] CVFDT
+- [X] Utilisation de trois modèles de classification de votre choix. Vous pouvez utiliser des classificateurs Machine Learning ou Deep Learning. Préciser la stratégie de validation utilisée (k-fold, training/test, etc.).
+- [X] K Plus Proches Voisins 
+- [X] SVM
+- [X] CVFDT
 
 ## Exo 4)
-- [ ] Evaluation des modèles via les métriques de validation adéquates
+- [X] Evaluation des modèles via les métriques de validation adéquates
 
 ## Exo 5)
 **Interface utilisateur** qui permet de :
