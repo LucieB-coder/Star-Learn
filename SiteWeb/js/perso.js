@@ -1,5 +1,5 @@
 let listeValeur = [
-"koi_score","koi_fpflag_nt","koi_fpflag_ss","koi_fpflag_co","koi_fpflag_ec","koi_period","koi_period_err1","koi_period_err2","koi_time0bk","koi_time0bk_err1","koi_time0bk_err2","koi_impact","koi_impact_err1","koi_impact_err2","koi_duration","koi_duration_err1","koi_duration_err2" ,"koi_depth","koi_depth_err1" ,"koi_depth_err2","koi_prad","koi_prad_err1","koi_prad_err2","koi_teq","koi_insol","koi_insol_err1","koi_insol_err2","koi_model_snr","koi_tce_plnt_num","koi_steff","koi_steff_err1","koi_steff_err2","koi_slogg","koi_slogg_err1","koi_slogg_err2","koi_srad","koi_srad_err1","koi_srad_err2","ra","dec","koi_kepmag"
+"koi_score"','"koi_fpflag_nt","koi_fpflag_ss","koi_fpflag_co","koi_fpflag_ec","koi_period","koi_period_err1","koi_period_err2","koi_time0bk","koi_time0bk_err1","koi_time0bk_err2","koi_impact","koi_impact_err1","koi_impact_err2","koi_duration","koi_duration_err1","koi_duration_err2" ,"koi_depth","koi_depth_err1" ,"koi_depth_err2","koi_prad","koi_prad_err1","koi_prad_err2","koi_teq","koi_insol","koi_insol_err1","koi_insol_err2","koi_model_snr","koi_tce_plnt_num","koi_steff","koi_steff_err1","koi_steff_err2","koi_slogg","koi_slogg_err1","koi_slogg_err2","koi_srad","koi_srad_err1","koi_srad_err2","ra","dec","koi_kepmag"
 ]
 let listeRemplissage1 = [
 "0.99","0","0","0","0","9.488035","0.000116","-0.000116","170.538750","0.003520","-0.003520","0.146","0.305","-0.077","2.957500","0.059500","-0.059500","615.80","22.41","-15.75","1.24","0.34","-0.23","793","93.59","29.45","-17.65","35.8","1","5455","81","-81","4.467","0.064","-0.096","0.927","0.105","-0.061","0.105","-0.061","15.347"
@@ -11,18 +11,13 @@ let listeRemplissageMin = ['0.0',"0","1","1","0", '0.259819659', '1.1e-08', '-0.
 
 let listeRemplissageMax = ['1.0', "1", "1", "1", "1", '1071.232624', '0.134', '-1.1e-08', '1472.522306', '0.569', '-8.7e-06', '25.224', '85.54', '0.0', '138.54', '13.2', '0.0', '922000.0', '13700.0', '0.0', '26042.9', '9460.0', '0.0', '14667.0', '10947554.55', '3617132.59', '0.0', '9054.7', '8.0', '15896.0', '676.0', '0.0', '5.364', '1.472', '0.0', '180.013', '33.091', '0.0', '301.72076', '52.33601', '19.065']
 
+let listeRemplissageValeurCandidat = [ "1",'0','0','0','0','4.959319244','5.15E-07','-5.15E-07','172.2585292','8.27E-05','-8.27E-05','0.831','0.016','-0.004','2.22739','0.0075','-0.0075','9.80E+03','2.00E+01','-2.00E+01','12.21','1.96E+00','-1.46E+00','1103','349.4','146.52','-93.21','696.5','1','5712','77','-77','4.359','0.11','-0.11','1.082','0.173','-0.13','292.16705','48.727589','15.263']
+
+let listeRemplissage = [listeRemplissage1, listeRemplissageMediane, listeRemplissageMin, listeRemplissageMax, listeRemplissageValeurCandidat]
 
 
 function remplirChamps(type = 1) {
     for (let i = 0; i < listeValeur.length; i++) {
-        if (type == 1) {
-            document.getElementById(listeValeur[i]).value = listeRemplissage1[i];
-        } else if (type == 2) {
-            document.getElementById(listeValeur[i]).value = listeRemplissageMediane[i];
-        } else if (type == 3) {
-            document.getElementById(listeValeur[i]).value = listeRemplissageMin[i];
-        } else if (type == 4) {
-            document.getElementById(listeValeur[i]).value = listeRemplissageMax[i];
-        }
+        document.getElementById(listeValeur[i]).value = listeRemplissage[type][i];
     }   
 }

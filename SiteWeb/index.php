@@ -63,16 +63,19 @@ if (isset($_POST['isSubmit']) && $_POST['isSubmit']==1) {
 <h3>Entrez vos données</h3>
 <br>
 <div>
-<button type="button" onclick="remplirChamps(1)">
+<button type="button" onclick="remplirChamps(0)">
   valeur par defaut 1
 </button>
-<button type="button" onclick="remplirChamps(2)">
+<button type="button" onclick="remplirChamps(4)">
+  valeur par defaut 2
+</button>
+<button type="button" onclick="remplirChamps(1)">
   valeur mediane
 </button>
-<button type="button" onclick="remplirChamps(3)">
+<button type="button" onclick="remplirChamps(2)">
   valeur minimum
 </button>
-<button type="button" onclick="remplirChamps(4)">
+<button type="button" onclick="remplirChamps(3)">
   valeur maximum
 </button>
 </div>
