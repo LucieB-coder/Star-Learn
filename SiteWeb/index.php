@@ -3,259 +3,259 @@
 if (isset($_POST['isSubmit']) && $_POST['isSubmit']==1) {
 
 	if (empty($_POST['koi_score'])) {
-		$errkoi_score='Il faut renseigné le ';
+		$errkoi_score='Il faut renseigner le ';
 	} else {
 		$koi_score=$_POST['koi_score'];
 	}
 
 	if (empty($_POST['koi_fpflag_nt'])) {
-		$errkoi_fpflag_nt='Il faut renseigné le ';
+		$errkoi_fpflag_nt='Il faut renseigner le ';
 	} else {
 		$koi_fpflag_nt=$_POST['koi_fpflag_nt'];
 	}
 
 	if (empty($_POST['koi_fpflag_ss'])) {
-		$errkoi_fpflag_ss='Il faut renseigné le ';
+		$errkoi_fpflag_ss='Il faut renseigner le ';
 	} else {
 		$koi_fpflag_ss=$_POST['koi_fpflag_ss'];
 	}
 
 	if (empty($_POST['koi_fpflag_co'])) {
-		$errkoi_fpflag_co='Il faut renseigné le ';
+		$errkoi_fpflag_co='Il faut renseigner le ';
 	} else {
 		$koi_fpflag_co=$_POST['koi_fpflag_co'];
 	}
 
 	if (empty($_POST['koi_fpflag_ec'])) {
-		$errkoi_fpflag_ec='Il faut renseigné le ';
+		$errkoi_fpflag_ec='Il faut renseigner le ';
 	} else {
 		$koi_fpflag_ec=$_POST['koi_fpflag_ec'];
 	}
 
 	if (empty($_POST['koi_period'])) {
-		$errkoi_period='Il faut renseigné le ';
+		$errkoi_period='Il faut renseigner le ';
 	} else {
 		$koi_period=$_POST['koi_period'];
 	}
 
 	if (empty($_POST['koi_period_err1'])) {
-		$errkoi_period_err1='Il faut renseigné le ';
+		$errkoi_period_err1='Il faut renseigner le ';
 	} else {
 		$koi_period_err1=$_POST['koi_period_err1'];
 	}
 
 	if (empty($_POST['koi_period_err2'])) {
-		$errkoi_period_err2='Il faut renseigné le ';
+		$errkoi_period_err2='Il faut renseigner le ';
 	} else {
 		$koi_period_err2=$_POST['koi_period_err2'];
 	}
 
 	if (empty($_POST['koi_time0bk'])) {
-		$errkoi_time0bk='Il faut renseigné le ';
+		$errkoi_time0bk='Il faut renseigner le ';
 	} else {
 		$koi_time0bk=$_POST['koi_time0bk'];
 	}
 
 	if (empty($_POST['koi_time0bk_err1'])) {
-		$errkoi_time0bk_err1='Il faut renseigné le ';
+		$errkoi_time0bk_err1='Il faut renseigner le ';
 	} else {
 		$koi_time0bk_err1=$_POST['koi_time0bk_err1'];
 	}
 
 	if (empty($_POST['koi_time0bk_err2'])) {
-		$errkoi_time0bk_err2='Il faut renseigné le ';
+		$errkoi_time0bk_err2='Il faut renseigner le ';
 	} else {
 		$koi_time0bk_err2=$_POST['koi_time0bk_err2'];
 	}
 
 	if (empty($_POST['koi_impact'])) {
-		$errkoi_impact='Il faut renseigné le ';
+		$errkoi_impact='Il faut renseigner le ';
 	} else {
 		$koi_impact=$_POST['koi_impact'];
 	}
 
 	if (empty($_POST['koi_impact_err1'])) {
-		$errkoi_impact_err1='Il faut renseigné le ';
+		$errkoi_impact_err1='Il faut renseigner le ';
 	} else {
 		$koi_impact_err1=$_POST['koi_impact_err1'];
 	}
 
 	if (empty($_POST['koi_impact_err2'])) {
-		$errkoi_impact_err2='Il faut renseigné le ';
+		$errkoi_impact_err2='Il faut renseigner le ';
 	} else {
 		$koi_impact_err2=$_POST['koi_impact_err2'];
 	}
 
 	if (empty($_POST['koi_duration'])) {
-		$errkoi_duration='Il faut renseigné le ';
+		$errkoi_duration='Il faut renseigner le ';
 	} else {
 		$koi_duration=$_POST['koi_duration'];
 	}
 
 	if (empty($_POST['koi_duration_err1'])) {
-		$errkoi_duration_err1='Il faut renseigné le ';
+		$errkoi_duration_err1='Il faut renseigner le ';
 	} else {
 		$koi_duration_err1=$_POST['koi_duration_err1'];
 	}
 
 	if (empty($_POST['koi_impact_err1'])) {
-		$errkoi_impact_err1='Il faut renseigné le ';
+		$errkoi_impact_err1='Il faut renseigner le ';
 	} else {
 		$koi_impact_err1=$_POST['koi_impact_err1'];
 	}
 
 	if (empty($_POST['koi_duration_err2'])) {
-		$errkoi_duration_err2='Il faut renseigné le ';
+		$errkoi_duration_err2='Il faut renseigner le ';
 	} else {
 		$koi_duration_err2=$_POST['koi_duration_err2'];
 	}
 
 	if (empty($_POST['koi_depth'])) {
-		$errkoi_depth='Il faut renseigné le ';
+		$errkoi_depth='Il faut renseigner le ';
 	} else {
 		$koi_depth=$_POST['koi_depth'];
 	}
 
 	if (empty($_POST['koi_depth_err1'])) {
-		$errkoi_depth_err1='Il faut renseigné le ';
+		$errkoi_depth_err1='Il faut renseigner le ';
 	} else {
 		$koi_depth_err1=$_POST['koi_depth_err1'];
 	}
 
 	if (empty($_POST['koi_depth_err2'])) {
-		$errkoi_depth_err2='Il faut renseigné le ';
+		$errkoi_depth_err2='Il faut renseigner le ';
 	} else {
 		$koi_depth_err2=$_POST['koi_depth_err2'];
 	}
 
 	if (empty($_POST['koi_prad'])) {
-		$errkoi_prad='Il faut renseigné le ';
+		$errkoi_prad='Il faut renseigner le ';
 	} else {
 		$koi_prad=$_POST['koi_prad'];
 	}
 
 	if (empty($_POST['koi_prad_err1'])) {
-		$errkoi_prad_err1='Il faut renseigné le ';
+		$errkoi_prad_err1='Il faut renseigner le ';
 	} else {
 		$koi_prad_err1=$_POST['koi_prad_err1'];
 	}
 
 	if (empty($_POST['koi_prad_err2'])) {
-		$errkoi_prad_err2='Il faut renseigné le ';
+		$errkoi_prad_err2='Il faut renseigner le ';
 	} else {
 		$koi_prad_err2=$_POST['koi_prad_err2'];
 	}
 
 	if (empty($_POST['koi_teq'])) {
-		$errkoi_teq='Il faut renseigné le ';
+		$errkoi_teq='Il faut renseigner le ';
 	} else {
 		$koi_teq=$_POST['koi_teq'];
 	}
 
 	if (empty($_POST['koi_insol'])) {
-		$errkoi_insol='Il faut renseigné le ';
+		$errkoi_insol='Il faut renseigner le ';
 	} else {
 		$koi_insol=$_POST['koi_insol'];
 	}
 
 	if (empty($_POST['koi_insol_err1'])) {
-		$errkoi_insol_err1='Il faut renseigné le ';
+		$errkoi_insol_err1='Il faut renseigner le ';
 	} else {
 		$koi_insol_err1=$_POST['koi_insol_err1'];
 	}
 
 	if (empty($_POST['koi_insol_err2'])) {
-		$errkoi_insol_err2='Il faut renseigné le ';
+		$errkoi_insol_err2='Il faut renseigner le ';
 	} else {
 		$koi_insol_err2=$_POST['koi_insol_err2'];
 	}
 
 	if (empty($_POST['koi_model_snr'])) {
-		$errkoi_model_snr='Il faut renseigné le ';
+		$errkoi_model_snr='Il faut renseigner le ';
 	} else {
 		$koi_model_snr=$_POST['koi_model_snr'];
 	}
 
 	if (empty($_POST['koi_tce_plnt_num'])) {
-		$errkoi_tce_plnt_num='Il faut renseigné le ';
+		$errkoi_tce_plnt_num='Il faut renseigner le ';
 	} else {
 		$koi_tce_plnt_num=$_POST['koi_tce_plnt_num'];
 	}
 
 	if (empty($_POST['koi_steff'])) {
-		$errkoi_steff='Il faut renseigné le ';
+		$errkoi_steff='Il faut renseigner le ';
 	} else {
 		$koi_steff=$_POST['koi_steff'];
 	}
 
 	if (empty($_POST['koi_steff_err1'])) {
-		$errkoi_steff_err1='Il faut renseigné le ';
+		$errkoi_steff_err1='Il faut renseigner le ';
 	} else {
 		$koi_steff_err1=$_POST['koi_steff_err1'];
 	}
 
 	if (empty($_POST['koi_steff_err2'])) {
-		$errkoi_steff_err2='Il faut renseigné le ';
+		$errkoi_steff_err2='Il faut renseigner le ';
 	} else {
 		$koi_steff_err2=$_POST['koi_steff_err2'];
 	}
 
 	if (empty($_POST['koi_slogg'])) {
-		$errkoi_slogg='Il faut renseigné le ';
+		$errkoi_slogg='Il faut renseigner le ';
 	} else {
 		$koi_slogg=$_POST['koi_slogg'];
 	}
 
 	if (empty($_POST['koi_slogg_err1'])) {
-		$errkoi_slogg_err1='Il faut renseigné le ';
+		$errkoi_slogg_err1='Il faut renseigner le ';
 	} else {
 		$koi_slogg_err1=$_POST['koi_slogg_err1'];
 	}
 
 	if (empty($_POST['koi_slogg_err2'])) {
-		$errkoi_slogg_err2='Il faut renseigné le ';
+		$errkoi_slogg_err2='Il faut renseigner le ';
 	} else {
 		$koi_slogg_err2=$_POST['koi_slogg_err2'];
 	}
 
 	if (empty($_POST['koi_srad'])) {
-		$errkoi_srad='Il faut renseigné le ';
+		$errkoi_srad='Il faut renseigner le ';
 	} else {
 		$koi_srad=$_POST['koi_srad'];
 	}
 
 	if (empty($_POST['koi_srad_err1'])) {
-		$errkoi_srad_err1='Il faut renseigné le ';
+		$errkoi_srad_err1='Il faut renseigner le ';
 	} else {
 		$koi_srad_err1=$_POST['koi_srad_err1'];
 	}
 
 	if (empty($_POST['koi_srad_err2'])) {
-		$errkoi_srad_err2='Il faut renseigné le ';
+		$errkoi_srad_err2='Il faut renseigner le ';
 	} else {
 		$koi_srad_err2=$_POST['koi_srad_err2'];
 	}
 
 	if (empty($_POST['ra'])) {
-		$errra='Il faut renseigné le ';
+		$errra='Il faut renseigner le ';
 	} else {
 		$ra=$_POST['ra'];
 	}
 
 	if (empty($_POST['dec'])) {
-		$errdec='Il faut renseigné le ';
+		$errdec='Il faut renseigner le ';
 	} else {
 		$dec=$_POST['dec'];
 	}
 
 	if (empty($_POST['koi_kepmag'])) {
-		$errkoi_kepmag='Il faut renseigné le ';
+		$errkoi_kepmag='Il faut renseigner le ';
 	} else {
 		$koi_kepmag=$_POST['koi_kepmag'];
 	}
 
 	if (empty($_POST['koi_disposition'])) {
-		$errkoi_disposition='Il faut renseigné le ';
+		$errkoi_disposition='Il faut renseigner le ';
 	} else {
 		$koi_disposition=$_POST['koi_disposition'];
 	}
@@ -493,6 +493,11 @@ if (isset($_POST['isSubmit']) && $_POST['isSubmit']==1) {
             </p>
             <p>	<?php if (isset($koi_score) && isset($koi_fpflag_nt) && isset($koi_fpflag_ss) && isset($koi_fpflag_co) && isset($koi_fpflag_ec) && isset($koi_period) && isset($koi_period_err1) && isset($koi_period_err2) && isset($koi_time0bk) && isset($koi_time0bk_err1) && isset($koi_time0bk_err2) && isset($koi_impact) && isset($koi_impact_err1) && isset($koi_impact_err2) && isset($koi_duration) && isset($koi_duration_err1) && isset($koi_duration_err2) && isset($koi_depth) && isset($koi_depth_err1) && isset($koi_depth_err2) && isset($koi_prad) && isset($koi_prad_err1) && isset($koi_prad_err2) && isset($koi_teq) && isset($koi_insol) && isset($koi_insol_err1) && isset($koi_insol_err2) && isset($koi_model_snr) && isset($koi_tce_plnt_num) && isset($koi_steff) && isset($koi_steff_err1) && isset($koi_steff_err2) && isset($koi_slogg) && isset($koi_slogg_err1) && isset($koi_slogg_err2) && isset($koi_srad) && isset($koi_srad_err1) && isset($koi_srad_err2) && isset($ra) && isset($dec) && isset($koi_kepmag) && isset($koi_disposition)){
                 echo "Demande prise en compte";
+                // Appel du script Python square.py
+                // avec un argument de 5
+                // exec("python square.py 5", $output);
+                // echo $output[0]; // Affiche 25
+                // Faire un main en python permettant d'utiliser tout les scripts python pour le php!
                 } ?>
             </p>
         </form>		
