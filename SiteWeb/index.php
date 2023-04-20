@@ -308,6 +308,7 @@ if (isset($_POST['isSubmit']) && $_POST['isSubmit']==1) {
 <h3>Entrez vos données</h3>
 <br>
 <article>
+    
     <div>
         <form action="index.php" method="POST">
             <p>
