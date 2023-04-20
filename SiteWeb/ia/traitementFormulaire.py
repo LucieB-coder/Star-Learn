@@ -20,7 +20,7 @@ data = pd.DataFrame([data])
 
 
 ##### Pour le MinMaxScaler
-df = pd.read_csv('/var/www/html/ia/exoplanets.csv')
+df = pd.read_csv('/var/www/html/starlearn/SiteWeb/ia/exoplanets.csv')
 df.dropna( how='all', axis=1, inplace=True)
 df.drop(columns=["kepid","kepoi_name","kepler_name", "koi_pdisposition","koi_tce_delivname"], inplace=True)
 df.dropna(inplace=True)
@@ -34,16 +34,16 @@ for c,v in enumerate(df.columns) :
 
      
 # Load des modèles entrainés
-with open ('/var/www/html/ia/knn.pkl', 'rb') as f:
+with open ('/var/www/html/starlearn/SiteWeb/ia/knn.pkl', 'rb') as f:
     knn = pickle.load(f)
-with open ('/var/www/html/ia/rfc.pkl', 'rb') as f:
+with open ('/var/www/html/starlearn/SiteWeb/ia/rfc.pkl', 'rb') as f:
     rfc = pickle.load(f)
-with open ('/var/www/html/ia/svm.pkl', 'rb') as f:
+with open ('/var/www/html/starlearn/SiteWeb/ia/svm.pkl', 'rb') as f:
     svm = pickle.load(f)
 
 
 
-dataPCA = pd.read_csv("/var/www/html/ia/exoplanetsExo1.csv")
+dataPCA = pd.read_csv("/var/www/html/starlearn/SiteWeb/ia/exoplanetsExo1.csv")
 dataT = dataPCA.drop("koi_disposition", axis=1)
 # Appliquer une réduction de dimension avec PCA
 pca = PCA(n_components=25)
