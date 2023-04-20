@@ -1,0 +1,48 @@
+'koi_score', 'koi_fpflag_nt', 'koi_fpflag_ss', 'koi_fpflag_co', 'koi_fpflag_ec', 'koi_period', 'koi_period_err1', 'koi_period_err2', 'koi_time0bk', 'koi_time0bk_err1', 'koi_time0bk_err2', 'koi_impact', 'koi_impact_err1', 'koi_impact_err2', 'koi_duration', 'koi_duration_err1', 'koi_duration_err2', 'koi_depth', 'koi_depth_err1', 'koi_depth_err2', 'koi_prad', 'koi_prad_err1', 'koi_prad_err2', 'koi_teq', 'koi_insol', 'koi_insol_err1', 'koi_insol_err2', 'koi_model_snr', 'koi_tce_plnt_num',  'koi_steff', 'koi_steff_err1', 'koi_steff_err2', 'koi_slogg', 'koi_slogg_err1', 'koi_slogg_err2', 'koi_srad', 'koi_srad_err1', 'koi_srad_err2', 'ra', 'dec', 'koi_kepmag'
+
+function remplirChamps() {
+    document.getElementById("koi_score").value = "0.99";
+    document.getElementById("koi_fpflag_nt").value = "0";
+    document.getElementById("koi_fpflag_ss").value = "0";
+    document.getElementById("koi_fpflag_co").value = "0";
+    document.getElementById("koi_fpflag_ec").value = "0";
+    document.getElementById("koi_period").value = "9.488035";
+    document.getElementById("koi_period_err1").value = "0.000116";
+    document.getElementById("koi_period_err2").value = "-0.000116";
+    document.getElementById("koi_time0bk").value = "170.538750";
+    document.getElementById("koi_time0bk_err1").value = "0.003520";
+    document.getElementById("koi_time0bk_err2").value = "-0.003520";
+    document.getElementById("koi_impact").value = "0.146";
+    document.getElementById("koi_impact_err1").value = "0.305";
+    document.getElementById("koi_impact_err2").value = "-0.077";
+    document.getElementById("koi_duration").value = "2.957500";
+    document.getElementById("koi_duration_err1").value = "0.059500";
+    document.getElementById("koi_duration_err2").value = "-0.059500";
+    document.getElementById("koi_depth").value = "615.80";
+    document.getElementById("koi_depth_err1").value = "22.41";
+    document.getElementById("koi_depth_err2").value = "-15.75";
+    document.getElementById("koi_prad").value = "1.24";
+    document.getElementById("koi_prad_err1").value = "0.34";
+    document.getElementById("koi_prad_err2").value = "-0.23";
+    document.getElementById("koi_teq").value = "793";
+    document.getElementById("koi_insol").value = "93.59";
+    document.getElementById("koi_insol_err1").value = "29.45";
+    document.getElementById("koi_insol_err2").value = "-17.65";
+    document.getElementById("koi_model_snr").value = "35.8";
+    document.getElementById("koi_tce_plnt_num").value = "1";
+    document.getElementById("koi_steff").value = "5455";
+    document.getElementById("koi_steff_err1").value = "81";
+    document.getElementById("koi_steff_err2").value = "-81";
+    document.getElementById("koi_slogg").value = "4.467";
+    document.getElementById("koi_slogg_err1").value = "0.064";
+    document.getElementById("koi_slogg_err2").value = "-0.096";
+    document.getElementById("koi_srad").value = "0.927";
+    document.getElementById("koi_srad_err1").value = "0.105";
+    document.getElementById("koi_srad_err2").value = "-0.061";
+    document.getElementById("ra").value = "0.105";
+    document.getElementById("dec").value = "-0.061";
+    document.getElementById("koi_kepmag").value = "15.347";
+
+
+
+}
