@@ -489,14 +489,17 @@ if (isset($_POST['isSubmit']) && $_POST['isSubmit']==1) {
             </p>
             <p>
                 <input type="hidden" name="isSubmit" value="1"/>
-                <input type="submit" value="Envoie" id="Envoie" class="ButtonPagePrincipal" onclick="getValue();"/>
+                <input type="submit" value="Envoi" id="Envoie" class="ButtonPagePrincipal" onclick="getValue();"/>
             </p>
             <p>	<?php if (isset($koi_score) && isset($koi_fpflag_nt) && isset($koi_fpflag_ss) && isset($koi_fpflag_co) && isset($koi_fpflag_ec) && isset($koi_period) && isset($koi_period_err1) && isset($koi_period_err2) && isset($koi_time0bk) && isset($koi_time0bk_err1) && isset($koi_time0bk_err2) && isset($koi_impact) && isset($koi_impact_err1) && isset($koi_impact_err2) && isset($koi_duration) && isset($koi_duration_err1) && isset($koi_duration_err2) && isset($koi_depth) && isset($koi_depth_err1) && isset($koi_depth_err2) && isset($koi_prad) && isset($koi_prad_err1) && isset($koi_prad_err2) && isset($koi_teq) && isset($koi_insol) && isset($koi_insol_err1) && isset($koi_insol_err2) && isset($koi_model_snr) && isset($koi_tce_plnt_num) && isset($koi_steff) && isset($koi_steff_err1) && isset($koi_steff_err2) && isset($koi_slogg) && isset($koi_slogg_err1) && isset($koi_slogg_err2) && isset($koi_srad) && isset($koi_srad_err1) && isset($koi_srad_err2) && isset($ra) && isset($dec) && isset($koi_kepmag) && isset($koi_disposition)){
                 echo "Demande prise en compte";
-                // Appel du script Python square.py
+                // Appel du script Python traitementFormulaire.py
                 // avec un argument de 5
-                // exec("python square.py 5", $output);
-                // echo $output[0]; // Affiche 25
+                exec("traitementFormulaire.py $koi_score $koi_fpflag_nt $koi_fpflag_ss $koi_fpflag_co $koi_fpflag_ec $koi_period $koi_period_err1 $koi_period_err2 $koi_time0bk $koi_time0bk_err1 $koi_time0bk_err2 $koi_impact $koi_impact_err1 $koi_impact_err2 $koi_duration $koi_duration_err1 $koi_duration_err2 $koi_depth $koi_depth_err1 $koi_depth_err2 $koi_prad $koi_prad_err1 $koi_prad_err2 $koi_teq $koi_insol $koi_insol_err1 $koi_insol_err2 $koi_model_snr $koi_tce_plnt_num $koi_steff $koi_steff_err1 $koi_steff_err2 $koi_slogg $koi_slogg_err1 $koi_slogg_err2 $koi_srad $koi_srad_err1 $koi_srad_err2 $ra $dec $koi_kepmag $koi_disposition", $output);
+                // On affiche les résultats
+                echo "Résultat KPPV : "+$output[0]; // Affiche le résultat du modèle KPPV
+                echo "Résultat RFC : "+$output[1]; // Affiche le résultat du modèle RFC
+                echo "Résultat SVM : "+$output[2]; // Affiche le résultat du modèle SVM
                 // Faire un main en python permettant d'utiliser tout les scripts python pour le php!
                 } ?>
             </p>
