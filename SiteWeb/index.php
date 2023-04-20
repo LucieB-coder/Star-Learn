@@ -107,9 +107,6 @@ if (isset($_POST['isSubmit']) && $_POST['isSubmit']==1) {
 
 <h2 id="ancre2">Résultat</h2>
 <div class="introEnt card">
-  <div class="card-header">
-  Title
-  </div>
   <div class="card-body">
     <blockquote class="introEnt blockquote mb-0">
   <?php   
