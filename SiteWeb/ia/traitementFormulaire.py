@@ -7,9 +7,9 @@ from sklearn.decomposition import PCA
 data = sys.argv[1:]
 
 # Load des modèles entrainés
-modele_kppv = jolib.load('./kppv.apk')
-modele_rfc = jolib.load('./rfc.apk')
-modele_svm = jolib.load('./svm.apk')
+modele_kppv = jolib.load('./kppv.pkl')
+modele_rfc = jolib.load('./rfc.pkl')
+modele_svm = jolib.load('./svm.pkl')
 
 # Réduction de dimensions des données entrantes
 pca = PCA(n_components=25)
