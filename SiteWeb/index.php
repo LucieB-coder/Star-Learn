@@ -23,12 +23,10 @@ if (isset($_POST['isSubmit']) && $_POST['isSubmit']==1) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="img/imgNav.jpg" type="image/">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-
 	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" /> <!--correspond au css personnel-->
     <!-- Bootstrap CSS et JS (a faire en dernier par défaut scroll déjà doucement)-->
    <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> On ne sens sert pas contenue block notre css-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <script src="js/perso.js"></script>
   </head>
   <body>
   <header>
@@ -63,8 +61,6 @@ if (isset($_POST['isSubmit']) && $_POST['isSubmit']==1) {
 <br>
 <h3>Entrez vos données</h3>
 <br>
-<button type="button" onclick="remplirChamps()">
-</button>
 <article>
     
     <div>
