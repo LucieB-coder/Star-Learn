@@ -7,7 +7,7 @@ $listeErr = array();
 if (isset($_POST['isSubmit']) && $_POST['isSubmit']==1) {
 
     foreach ($listeValeur as $valeur) {
-        if (empty($_POST[$valeur])) {
+        if (! isset($_POST[$valeur])) {
             $listeErr[$valeur] = 'Il faut renseigner le '.$valeur;
         } else {
             $$valeur = $_POST[$valeur];
@@ -94,11 +94,8 @@ if (isset($_POST['isSubmit']) && $_POST['isSubmit']==1) {
                 echo "Demande prise en compte";
                 // Appel du script Python traitementFormulaire.py
                 // avec un argument de 5
-                exec("C:/Program Files/Python310/python.exe ia/traitementFormulaire.py $koi_score $koi_fpflag_nt $koi_fpflag_ss $koi_fpflag_co $koi_fpflag_ec $koi_period $koi_period_err1 $koi_period_err2 $koi_time0bk $koi_time0bk_err1 $koi_time0bk_err2 $koi_impact $koi_impact_err1 $koi_impact_err2 $koi_duration $koi_duration_err1 $koi_duration_err2 $koi_depth $koi_depth_err1 $koi_depth_err2 $koi_prad $koi_prad_err1 $koi_prad_err2 $koi_teq $koi_insol $koi_insol_err1 $koi_insol_err2 $koi_model_snr $koi_tce_plnt_num $koi_steff $koi_steff_err1 $koi_steff_err2 $koi_slogg $koi_slogg_err1 $koi_slogg_err2 $koi_srad $koi_srad_err1 $koi_srad_err2 $ra $dec $koi_kepmag", $output);
+                exec("python3 /var/www/html/ia/traitementFormulaire.py $koi_score $koi_fpflag_nt $koi_fpflag_ss $koi_fpflag_co $koi_fpflag_ec $koi_period $koi_period_err1 $koi_period_err2 $koi_time0bk $koi_time0bk_err1 $koi_time0bk_err2 $koi_impact $koi_impact_err1 $koi_impact_err2 $koi_duration $koi_duration_err1 $koi_duration_err2 $koi_depth $koi_depth_err1 $koi_depth_err2 $koi_prad $koi_prad_err1 $koi_prad_err2 $koi_teq $koi_insol $koi_insol_err1 $koi_insol_err2 $koi_model_snr $koi_tce_plnt_num $koi_steff $koi_steff_err1 $koi_steff_err2 $koi_slogg $koi_slogg_err1 $koi_slogg_err2 $koi_srad $koi_srad_err1 $koi_srad_err2 $ra $dec $koi_kepmag", $output);
                 // On affiche les résultats
-                echo "Résultat KPPV : "+$output[0]; // Affiche le résultat du modèle KPPV
-                echo "Résultat RFC : "+$output[1]; // Affiche le résultat du modèle RFC
-                echo "Résultat SVM : "+$output[2]; // Affiche le résultat du modèle SVM
                 // Faire un main en python permettant d'utiliser tout les scripts python pour le php!
                 } ?>
             </p>
@@ -115,12 +112,11 @@ if (isset($_POST['isSubmit']) && $_POST['isSubmit']==1) {
   </div>
   <div class="card-body">
     <blockquote class="introEnt blockquote mb-0">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, 
-        dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim
-        est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque 
-        congue. Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue. Praesent egestas leo in pede. Praesent blandit odio eu enim. 
-        Pellentesque sed dui ut augue blandit sodales. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam nibh. 
-        Mauris ac mauris sed pede pellentesque fermentum. Maecenas adipiscing ante non diam sodales hendrerit. 
+  <?php   
+  echo "<p> Resultat KNN : ".$output[0]."</p>"; // Affiche le résultat du modèle KNN
+  echo "<p> Resultat RFC : ".$output[1]."</p>"; // Affiche le résultat du modèle RFC
+  echo "<p> Resultat SVM : ".$output[2]."</p>"; // Affiche le résultat du modèle SVM
+  ?>
       <footer class="blockquote-footer">Ceci est le résultat du travail d'équipe de notre groupe (Lucie Bedouret, Nathan Verdier, Tristan Barlet, Noémie Varjabedian) </footer>
     </blockquote>
   </div>
