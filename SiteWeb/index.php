@@ -141,7 +141,7 @@ if (isset($_POST['isSubmit']) && $_POST['isSubmit']==1) {
 	}
 
 	if (empty($_POST['koi_prad_err2'])) {
-		$koi_prad_err2='Il faut renseigné le ';
+		$errkoi_prad_err2='Il faut renseigné le ';
 	} else {
 		$koi_prad_err2=$_POST['koi_prad_err2'];
 	}
@@ -309,7 +309,7 @@ if (isset($_POST['isSubmit']) && $_POST['isSubmit']==1) {
 <br>
 <article>
     <div>
-        <form action="bootstrap.php" method="POST">
+        <form action="index.php" method="POST">
             <p>
                 <?php if (isset($errkoi_score)) { echo $errkoi_score; } ?>
                 <label for="koi_score">Koi_score</label><br>
@@ -492,7 +492,7 @@ if (isset($_POST['isSubmit']) && $_POST['isSubmit']==1) {
                 <input type="submit" value="Envoie" id="Envoie" class="ButtonPagePrincipal" onclick="getValue();"/>
             </p>
             <p>	<?php if (isset($koi_score) && isset($koi_fpflag_nt) && isset($koi_fpflag_ss) && isset($koi_fpflag_co) && isset($koi_fpflag_ec) && isset($koi_period) && isset($koi_period_err1) && isset($koi_period_err2) && isset($koi_time0bk) && isset($koi_time0bk_err1) && isset($koi_time0bk_err2) && isset($koi_impact) && isset($koi_impact_err1) && isset($koi_impact_err2) && isset($koi_duration) && isset($koi_duration_err1) && isset($koi_duration_err2) && isset($koi_depth) && isset($koi_depth_err1) && isset($koi_depth_err2) && isset($koi_prad) && isset($koi_prad_err1) && isset($koi_prad_err2) && isset($koi_teq) && isset($koi_insol) && isset($koi_insol_err1) && isset($koi_insol_err2) && isset($koi_model_snr) && isset($koi_tce_plnt_num) && isset($koi_steff) && isset($koi_steff_err1) && isset($koi_steff_err2) && isset($koi_slogg) && isset($koi_slogg_err1) && isset($koi_slogg_err2) && isset($koi_srad) && isset($koi_srad_err1) && isset($koi_srad_err2) && isset($ra) && isset($dec) && isset($koi_kepmag) && isset($koi_disposition)){
-                
+                echo "Demande prise en compte";
                 } ?>
             </p>
         </form>		
