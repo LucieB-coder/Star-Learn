@@ -27,7 +27,8 @@ df["koi_disposition"] = df["koi_disposition"].map(
 # Normalisation des données avec MinMax
 for i in df.columns :
     if i not in ["koi_disposition", "koi_fpflag_nt", "koi_fpflag_ss", "koi_fpflag_co", "koi_fpflag_ec"]:
-        df[i] = MinMaxScaler().fit_transform(df[i].values.reshape(-1,1))
+        scaler = MinMaxScaler().fit(df[i].values.reshape(-1,1))
+        df[i] = scaler.transform(df[i].values.reshape(-1,1))
 
 
 for i in df.columns :

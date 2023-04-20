@@ -1,5 +1,6 @@
 from sklearn.ensemble import RandomForestClassifier
-import joblib
+
+import pickle
 from sklearn.metrics import accuracy_score
 from datetime import datetime
 import pandas as pd
@@ -31,6 +32,7 @@ print(f'Exactitude du modèle : {accuracy*100:.2f}%')
 
 
 # Sauvegarde du modèle
-joblib.dump(rfc, 'SiteWeb/ia/rfc.pkl')
+with open('SiteWeb/ia/rfc.pkl', 'wb') as file:
+    pickle.dump(rfc, file)
 
 

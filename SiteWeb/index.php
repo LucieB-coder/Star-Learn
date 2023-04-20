@@ -27,6 +27,7 @@ if (isset($_POST['isSubmit']) && $_POST['isSubmit']==1) {
     <!-- Bootstrap CSS et JS (a faire en dernier par défaut scroll déjà doucement)-->
    <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> On ne sens sert pas contenue block notre css-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="js/perso.js"></script>
   </head>
   <body>
   <header>
@@ -61,6 +62,9 @@ if (isset($_POST['isSubmit']) && $_POST['isSubmit']==1) {
 <br>
 <h3>Entrez vos données</h3>
 <br>
+<button type="button" onclick="remplirChamps()">
+  remplir le formulaire
+</button>
 <article>
     
     <div>
@@ -86,11 +90,11 @@ if (isset($_POST['isSubmit']) && $_POST['isSubmit']==1) {
                 <input type="hidden" name="isSubmit" value="1"/>
                 <input type="submit" value="Envoi" id="Envoie" class="ButtonPagePrincipal" onclick="getValue();"/>
             </p>
-            <p>	<?php if (isset($koi_score) && isset($koi_fpflag_nt) && isset($koi_fpflag_ss) && isset($koi_fpflag_co) && isset($koi_fpflag_ec) && isset($koi_period) && isset($koi_period_err1) && isset($koi_period_err2) && isset($koi_time0bk) && isset($koi_time0bk_err1) && isset($koi_time0bk_err2) && isset($koi_impact) && isset($koi_impact_err1) && isset($koi_impact_err2) && isset($koi_duration) && isset($koi_duration_err1) && isset($koi_duration_err2) && isset($koi_depth) && isset($koi_depth_err1) && isset($koi_depth_err2) && isset($koi_prad) && isset($koi_prad_err1) && isset($koi_prad_err2) && isset($koi_teq) && isset($koi_insol) && isset($koi_insol_err1) && isset($koi_insol_err2) && isset($koi_model_snr) && isset($koi_tce_plnt_num) && isset($koi_steff) && isset($koi_steff_err1) && isset($koi_steff_err2) && isset($koi_slogg) && isset($koi_slogg_err1) && isset($koi_slogg_err2) && isset($koi_srad) && isset($koi_srad_err1) && isset($koi_srad_err2) && isset($ra) && isset($dec) && isset($koi_kepmag) && isset($koi_disposition)){
+            <p>	<?php if (isset($koi_score) && isset($koi_fpflag_nt) && isset($koi_fpflag_ss) && isset($koi_fpflag_co) && isset($koi_fpflag_ec) && isset($koi_period) && isset($koi_period_err1) && isset($koi_period_err2) && isset($koi_time0bk) && isset($koi_time0bk_err1) && isset($koi_time0bk_err2) && isset($koi_impact) && isset($koi_impact_err1) && isset($koi_impact_err2) && isset($koi_duration) && isset($koi_duration_err1) && isset($koi_duration_err2) && isset($koi_depth) && isset($koi_depth_err1) && isset($koi_depth_err2) && isset($koi_prad) && isset($koi_prad_err1) && isset($koi_prad_err2) && isset($koi_teq) && isset($koi_insol) && isset($koi_insol_err1) && isset($koi_insol_err2) && isset($koi_model_snr) && isset($koi_tce_plnt_num) && isset($koi_steff) && isset($koi_steff_err1) && isset($koi_steff_err2) && isset($koi_slogg) && isset($koi_slogg_err1) && isset($koi_slogg_err2) && isset($koi_srad) && isset($koi_srad_err1) && isset($koi_srad_err2) && isset($ra) && isset($dec) && isset($koi_kepmag)){
                 echo "Demande prise en compte";
                 // Appel du script Python traitementFormulaire.py
                 // avec un argument de 5
-                exec("traitementFormulaire.py $koi_score $koi_fpflag_nt $koi_fpflag_ss $koi_fpflag_co $koi_fpflag_ec $koi_period $koi_period_err1 $koi_period_err2 $koi_time0bk $koi_time0bk_err1 $koi_time0bk_err2 $koi_impact $koi_impact_err1 $koi_impact_err2 $koi_duration $koi_duration_err1 $koi_duration_err2 $koi_depth $koi_depth_err1 $koi_depth_err2 $koi_prad $koi_prad_err1 $koi_prad_err2 $koi_teq $koi_insol $koi_insol_err1 $koi_insol_err2 $koi_model_snr $koi_tce_plnt_num $koi_steff $koi_steff_err1 $koi_steff_err2 $koi_slogg $koi_slogg_err1 $koi_slogg_err2 $koi_srad $koi_srad_err1 $koi_srad_err2 $ra $dec $koi_kepmag $koi_disposition", $output);
+                exec("C:/Program Files/Python310/python.exe ia/traitementFormulaire.py $koi_score $koi_fpflag_nt $koi_fpflag_ss $koi_fpflag_co $koi_fpflag_ec $koi_period $koi_period_err1 $koi_period_err2 $koi_time0bk $koi_time0bk_err1 $koi_time0bk_err2 $koi_impact $koi_impact_err1 $koi_impact_err2 $koi_duration $koi_duration_err1 $koi_duration_err2 $koi_depth $koi_depth_err1 $koi_depth_err2 $koi_prad $koi_prad_err1 $koi_prad_err2 $koi_teq $koi_insol $koi_insol_err1 $koi_insol_err2 $koi_model_snr $koi_tce_plnt_num $koi_steff $koi_steff_err1 $koi_steff_err2 $koi_slogg $koi_slogg_err1 $koi_slogg_err2 $koi_srad $koi_srad_err1 $koi_srad_err2 $ra $dec $koi_kepmag", $output);
                 // On affiche les résultats
                 echo "Résultat KPPV : "+$output[0]; // Affiche le résultat du modèle KPPV
                 echo "Résultat RFC : "+$output[1]; // Affiche le résultat du modèle RFC

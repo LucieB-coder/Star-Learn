@@ -2,7 +2,9 @@
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import accuracy_score
 import pandas as pd
-import joblib
+import pickle
+from sklearn.decomposition import PCA
+from sklearn.preprocessing import MinMaxScaler
 
 # Charger les données
 data = pd.read_csv('File/exoplanetsExo2.csv')
@@ -30,4 +32,5 @@ accuracy = accuracy_score(y_test, y_pred)
 print(f"Exactitude (accuracy) du modèle : {accuracy * 100:.2f}%")
 
 # Sauvegarde du modèle
-joblib.dump(knn, 'SiteWeb/ia/kppv.pkl')
+with open('SiteWeb/ia/knn.pkl', 'wb') as file:
+    pickle.dump(knn, file)

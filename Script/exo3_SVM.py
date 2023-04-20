@@ -1,6 +1,6 @@
 from sklearn.model_selection import train_test_split
 from sklearn import svm
-import joblib
+import pickle
 from sklearn.metrics import accuracy_score
 import pandas as pd
 
@@ -26,4 +26,5 @@ accuracy = accuracy_score(y_test, y_pred)
 print(f"Accuracy: {accuracy:.2%}")
 
 # Sauvegarde du modèle
-joblib.dump(clf, 'SiteWeb/ia/svm.pkl')
+with open('SiteWeb/ia/svm.pkl', 'wb') as file:
+    pickle.dump(clf, file)

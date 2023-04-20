@@ -1,24 +1,61 @@
 import pandas as pd
-import jolib
-import sys
+import pickle
 from sklearn.decomposition import PCA
+from sklearn.preprocessing import MinMaxScaler
+import pandas as pd
+import sys
+
 
 # Load arguments
 data = sys.argv[1:]
 
-# Load des modèles entrainés
-modele_kppv = jolib.load('./kppv.pkl')
-modele_rfc = jolib.load('./rfc.pkl')
-modele_svm = jolib.load('./svm.pkl')
 
-# Réduction de dimensions des données entrantes
+# data = [
+#      "0.99", "0", "0", "0", "0", "9.488035", "0.000116", "-0.000116", "170.538750", "0.003520", "-0.003520", "0.146", "0.305", "-0.077", "2.957500", "0.059500", "-0.059500", "615.80", "22.41", "-15.75", "1.24", "0.34", "-0.23", "793", "93.59", "29.45", "-17.65", "35.8", "1", "5455", "81", "-81", "4.467", "0.064", "-0.096", "0.927", "0.105", "-0.061", "0.105", "-0.061", "15.347",
+# ]  
+
+data = [float(i) for i in data]
+data = pd.DataFrame([data])
+
+
+
+
+##### Pour le MinMaxScaler
+df = pd.read_csv('File/exoplanets.csv')
+df.dropna( how='all', axis=1, inplace=True)
+df.drop(columns=["kepid","kepoi_name","kepler_name", "koi_pdisposition","koi_tce_delivname"], inplace=True)
+df.dropna(inplace=True)
+for c,v in enumerate(df.columns) :
+    if v not in ["koi_disposition", "koi_fpflag_nt", "koi_fpflag_ss", "koi_fpflag_co", "koi_fpflag_ec"]:
+        scaler = MinMaxScaler().fit(df[v].values.reshape(-1,1))
+        df[v] = scaler.transform(df[v].values.reshape(-1,1))
+        data[c-1] = scaler.transform(data[c-1].values.reshape(-1,1))
+
+
+
+     
+# Load des modèles entrainés
+with open ('SiteWeb/ia/knn.pkl', 'rb') as f:
+    knn = pickle.load(f)
+with open ('SiteWeb/ia/rfc.pkl', 'rb') as f:
+    rfc = pickle.load(f)
+with open ('SiteWeb/ia/svm.pkl', 'rb') as f:
+    svm = pickle.load(f)
+
+
+
+dataPCA = pd.read_csv("File/exoplanetsExo1.csv")
+dataT = dataPCA.drop("koi_disposition", axis=1)
+# Appliquer une réduction de dimension avec PCA
 pca = PCA(n_components=25)
-data_pca = pca.fit_transform(data)
+pca.fit(dataT)
+data_pca = pca.transform(data)
+data_pca = pd.DataFrame(data_pca, columns=[ str(i) for i in range(25) ])
 
 # Classification avec les trois modèles
-y_pred_kppv = modele_kppv.predict(data_pca)
-y_pred_rfc = modele_rfc.predict(data_pca)
-y_pred_svm = modele_svm.predict(data_pca)
+y_pred_kppv = knn.predict(data_pca)
+y_pred_rfc = rfc.predict(data_pca)
+y_pred_svm = svm.predict(data_pca)
 
 # Conversion des résultats et transmition des résultats au fichier index.php
 d={0:"FALSE_POSITIVE", 1:"CONFIRMED", 2:"CANDIDATE"}
