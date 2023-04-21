@@ -123,12 +123,65 @@ if (isset($_POST['isSubmit']) && $_POST['isSubmit']==1) {
 <div class="introEnt card">
   <div class="card-body">
     <blockquote class="introEnt blockquote mb-0">
-  <?php   
-  echo "<p> Resultat KNN : ".$output[0]."</p>"; // Affiche le résultat du modèle KNN
-  echo "<p> Resultat RFC : ".$output[1]."</p>"; // Affiche le résultat du modèle RFC
-  echo "<p> Resultat SVM : ".$output[2]."</p>"; // Affiche le résultat du modèle SVM
-  ?>
-      <footer class="blockquote-footer">Ceci est le résultat du travail d'équipe de notre groupe (Lucie Bedouret, Nathan Verdier, Tristan Barlet, Noémie Varjabedian) </footer>
+    <?php   
+    echo "<p> Resultat K Plus Proches voisins : ".$output[0]."</p>"; // Affiche le résultat du modèle KNN
+    echo "<p> Resultat Random Forest : ".$output[1]."</p>"; // Affiche le résultat du modèle RFC
+    echo "<p> Resultat SVM : ".$output[2]."</p>"; // Affiche le résultat du modèle SVM
+    ?>
+    <br/>
+    <!-- Faire un tableau de 6 ligne par 4 colonnes -->
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Modèle</th>
+          <th scope="col">Accuracy</th>
+          <th scope="col">Precision</th>
+          <th scope="col">F1 Score</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">K Plus Proches voisins</th>
+          <td> 84.12% </td>
+          <td> confirmed : 73.63%
+candidate : 79.85%
+false positive : 99.49%
+modèle : 84.32%  </td>
+          <td> confirmed : 77.56%
+candidate : 74.85%
+false positive : 99.75%
+modèle : 84.05% </td>
+        </tr>
+        <tr>
+          <th scope="row">Random Forest</th>
+          <td> 92.30% </td>
+          <td> confirmed : 86.02%
+candidate : 91.25%
+false positive : 100.00%
+modèle : 92.42% </td>
+          <td> confirmed : 88.83%
+candidate : 88.05%
+false positive : 100.00%
+modèle : 92.30% </td>
+        </tr>
+        <tr>
+          <th scope="row">SVM</th>
+          <td> 80.36%  </td>
+          <td> confirmed : 66.86%
+candidate : 77.06%
+false positive : 99.28%
+modèle : 81.07% </td>
+          <td> confirmed : 73.61%
+candidate : 66.97%
+false positive : 99.64%
+modèle : 80.07% </td>
+        </tr>
+      </tbody>
+    </table>
+    </blockquote>
+    
+    <blockquote class="introEnt blockquote mb-0">
+    <footer class="blockquote-footer">Ceci est le résultat du travail d'équipe de notre groupe (Lucie Bedouret, Nathan Verdier, Tristan Barlet, Noémie Varjabedian) </footer>7
     </blockquote>
   </div>
 
