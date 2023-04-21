@@ -23,7 +23,7 @@ data = pd.DataFrame([data])
 with open ('/var/www/html/starlearn/SiteWeb/ia/minMaxScaler.pkl', 'rb') as f:
     scaler = pickle.load(f)
 
-cols_to_scale = data.drop(["1", "2", "3", "4"], axis=1).columns
+cols_to_scale = data.drop([2,3,4,5], axis=1).columns
 
 data[cols_to_scale] = scaler.transform(data[cols_to_scale].values.reshape(-1,1))
 
