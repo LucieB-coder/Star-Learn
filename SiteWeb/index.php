@@ -179,12 +179,11 @@ if (isset($_POST['isSubmit']) && $_POST['isSubmit']==1) {
         </tbody>
     </table>
     </blockquote>
-
-  </div>
-  
-  <blockquote class="introEnt blockquote mb-0">
+    <br>
+    <blockquote class="introEnt blockquote mb-0">
     <footer class="blockquote-footer">Ceci est le résultat du travail d'équipe de notre groupe (Lucie Bedouret, Nathan Verdier, Tristan Barlet, Noémie Varjabedian) </footer>7
-  </blockquote>
+    </blockquote>
+  </div>
 
 
 
