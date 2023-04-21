@@ -7,7 +7,7 @@ import sys
 
 # print("coucou")
 data = sys.argv[1:]
-
+print("sys.argv[1:] ",data, file=sys.stderr)
 
 # data = [
 #      "0.99", "0", "0", "0", "0", "9.488035", "0.000116", "-0.000116", "170.538750", "0.003520", "-0.003520", "0.146", "0.305", "-0.077", "2.957500", "0.059500", "-0.059500", "615.80", "22.41", "-15.75", "1.24", "0.34", "-0.23", "793", "93.59", "29.45", "-17.65", "35.8", "1", "5455", "81", "-81", "4.467", "0.064", "-0.096", "0.927", "0.105", "-0.061", "0.105", "-0.061", "15.347",
@@ -24,6 +24,7 @@ with open ('/var/www/html/starlearn/SiteWeb/ia/minMaxScaler.pkl', 'rb') as f:
     scaler = pickle.load(f)
 
 cols_to_scale = data.drop([2,3,4,5], axis=1).columns
+print("cols_to_scale",cols_to_scale, file=sys.stderr)
 
 data[cols_to_scale] = scaler.transform(data[cols_to_scale].values.reshape(-1,1))
 
