@@ -20,15 +20,14 @@ data = pd.DataFrame([data])
 
 
 ##### Pour le MinMaxScaler
-df = pd.read_csv('/var/www/html/starlearn/SiteWeb/ia/exoplanets.csv')
-df.dropna( how='all', axis=1, inplace=True)
-df.drop(columns=["kepid","kepoi_name","kepler_name", "koi_pdisposition","koi_tce_delivname"], inplace=True)
-df.dropna(inplace=True)
-for c,v in enumerate(df.columns) :
-    if v not in ["koi_disposition", "koi_fpflag_nt", "koi_fpflag_ss", "koi_fpflag_co", "koi_fpflag_ec"]:
-        scaler = MinMaxScaler().fit(df[v].values.reshape(-1,1))
-        df[v] = scaler.transform(df[v].values.reshape(-1,1))
-        data[c-1] = scaler.transform(data[c-1].values.reshape(-1,1))
+with open ('/var/www/html/starlearn/SiteWeb/ia/minMaxScaler.pkl', 'rb') as f:
+    scaler = pickle.load(f)
+
+cols_to_scale = data.drop(["1", "2", "3", "4"], axis=1).columns
+
+data[cols_to_scale] = scaler.transform(data[cols_to_scale].values.reshape(-1,1))
+
+
 
 
 

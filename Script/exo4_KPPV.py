@@ -4,8 +4,8 @@ import pandas as pd
 import time
 
 # Charger les données
-data = pd.read_csv('exoplanetsExo2.csv')
-dataTest = pd.read_csv('exoplanetsExo2Test.csv')
+data = pd.read_csv('File/exoplanetsExo2.csv')
+dataTest = pd.read_csv('File/exoplanetsExo2Test.csv')
 
 # Separer les données en X et y
 X_train = data.drop('koi_disposition', axis=1)

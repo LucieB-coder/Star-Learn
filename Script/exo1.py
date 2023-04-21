@@ -1,6 +1,7 @@
 # Traitement des valeurs manquantes
 import pandas as pd
 import numpy as np
+import pickle
 from imblearn.under_sampling import RandomUnderSampler
 from collections import Counter
 from sklearn.preprocessing import MinMaxScaler
@@ -24,11 +25,14 @@ df["koi_disposition"] = df["koi_disposition"].map(
     {"CONFIRMED": 1, "FALSE POSITIVE": 0, "CANDIDATE": 2}
 )
 
-# Normalisation des données avec MinMax
-for i in df.columns :
-    if i not in ["koi_disposition", "koi_fpflag_nt", "koi_fpflag_ss", "koi_fpflag_co", "koi_fpflag_ec"]:
-        scaler = MinMaxScaler().fit(df[i].values.reshape(-1,1))
-        df[i] = scaler.transform(df[i].values.reshape(-1,1))
+cols_to_scale = df.drop(["koi_disposition", "koi_fpflag_nt", "koi_fpflag_ss", "koi_fpflag_co", "koi_fpflag_ec"], axis=1).columns
+
+scaler = MinMaxScaler()
+df[cols_to_scale] = scaler.fit_transform(df[cols_to_scale])
+
+with open('SiteWeb/ia/minMaxScaler.pkl', 'wb') as file:
+    pickle.dump(scaler, file)
+
 
 
 for i in df.columns :
