@@ -142,39 +142,39 @@ if (isset($_POST['isSubmit']) && $_POST['isSubmit']==1) {
         <tbody>
             <tr>
             <td>K Plus Proches voisins</td>
-            <td>84.12%</td>
-            <td>confirmed : 73.63%<br>
-                candidate : 79.85%<br>
-                false positive : 99.49%<br>
-                modèle : 84.32%</td>
-            <td>confirmed : 77.56%<br>
-                candidate : 74.85%<br>
-                false positive : 99.75%<br>
-                modèle : 84.05%</td>
+            <td>86.87%</td>
+            <td>confirmed : 78.77%<br>
+                candidate : 82.42%<br>
+                false positive : 99.56%<br>
+                modèle : 86.92%</td>
+            <td>confirmed : 80.95%<br>
+                candidate : 79.88%<br>
+                false positive : 99.71%<br>
+                modèle : 86.85%</td>
             </tr>
             <tr>
             <td>Random Forest</td>
-            <td>92.30%</td>
-            <td>confirmed : 86.02%<br>
-                candidate : 91.25%<br>
+            <td>92.91%</td>
+            <td>confirmed : 86.76%<br>
+                candidate : 92.04%<br>
                 false positive : 100.00%<br>
-                modèle : 92.42%</td>
-            <td>confirmed : 88.83%<br>
-                candidate : 88.05%<br>
+                modèle : 92.93%</td>
+            <td>confirmed : 89.67%<br>
+                candidate : 88.85%<br>
                 false positive : 100.00%<br>
-                modèle : 92.30%</td>
+                modèle : 92.81%</td>
             </tr>
             <tr>
             <td>SVM</td>
-            <td>80.36%</td>
-            <td>confirmed : 66.86%<br>
-                candidate : 77.06%<br>
+            <td>80.48%</td>
+            <td>confirmed : 67.08%<br>
+                candidate : 77.12%<br>
                 false positive : 99.28%<br>
-                modèle : 81.07%</td>
-            <td>confirmed : 73.61%<br>
-                candidate : 66.97%<br>
+                modèle : 81.16%</td>
+            <td>confirmed : 73.71%<br>
+                candidate : 67.27%<br>
                 false positive : 99.64%<br>
-                modèle : 80.07%</td>
+                modèle : 80.21%</td>
             </tr>
         </tbody>
     </table>
