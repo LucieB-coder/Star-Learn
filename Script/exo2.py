@@ -1,6 +1,6 @@
 from sklearn.decomposition import PCA
-import pickle
 import pandas as pd
+import pickle   
 
 # Importer les données
 data = pd.read_csv("File/exoplanetsExo1.csv")
@@ -15,19 +15,20 @@ data_pca = pd.DataFrame(data_pca)
 data_pca["koi_disposition"] = koi
 data_pca.to_csv("File/exoplanetsExo2.csv", index=False)
 
+# Sauvegarder le modèle PCA
+with open ('SiteWeb/ia/pca.pkl', 'wb') as f:
+    pickle.dump(pca, f)
+
 
 # On fait ça avec les données de test
 dataTest = pd.read_csv("File/exoplanetsExo1Test.csv")
 dataTestT = dataTest.drop("koi_disposition", axis=1)
 koiTest = dataTest["koi_disposition"]
 # Appliquer une réduction de dimension avec PCA
+# pca = PCA(n_components=25)
 dataTest_pca = pca.transform(dataTestT)
 
 # Sauvegarder les données réduites dans un nouveau fichier CSV
 dataTest_pca = pd.DataFrame(dataTest_pca)
 dataTest_pca["koi_disposition"] = koiTest
 dataTest_pca.to_csv("File/exoplanetsExo2Test.csv", index=False)
-
-# Sauvegarder le modèle PCA
-with open ('SiteWeb/ia/pca.pkl', 'wb') as f:
-    pickle.dump(pca, f)
