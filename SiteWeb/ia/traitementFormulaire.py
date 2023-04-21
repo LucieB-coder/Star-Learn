@@ -43,11 +43,11 @@ with open ('/var/www/html/starlearn/SiteWeb/ia/svm.pkl', 'rb') as f:
 
 
 
-dataPCA = pd.read_csv("/var/www/html/starlearn/SiteWeb/ia/exoplanetsExo1.csv")
-dataT = dataPCA.drop("koi_disposition", axis=1)
-# Appliquer une réduction de dimension avec PCA
-pca = PCA(n_components=25)
-pca.fit(dataT)
+
+##### Pour le PCA
+with open ('/var/www/html/starlearn/SiteWeb/ia/pca.pkl', 'rb') as f:
+    pca = pickle.load(f)
+    
 data_pca = pca.transform(data)
 data_pca = pd.DataFrame(data_pca, columns=[ str(i) for i in range(25) ])
 
