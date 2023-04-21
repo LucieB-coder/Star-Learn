@@ -27,6 +27,6 @@ geometry: margin=2cm
 
 ## Exo 5)
 **Interface utilisateur** qui permet de :
-- [ ] Téléverser ou de saisir un nouvel objet à classer.
-- [ ] Afficher les résultats de classification de l’objet, donnés par chacun des 3 modèles.
-- [ ] Afficher les métriques d’évaluation de chaque modèle.
+- [X] Téléverser ou de saisir un nouvel objet à classer.
+- [X] Afficher les résultats de classification de l’objet, donnés par chacun des 3 modèles.
+- [X] Afficher les métriques d’évaluation de chaque modèle.
