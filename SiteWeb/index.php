@@ -133,45 +133,45 @@ if (isset($_POST['isSubmit']) && $_POST['isSubmit']==1) {
     <table style="table-layout: fixed;width: 100%;">
         <thead>
             <tr>
-            <th style="border: 2px solid rgba(0, 45, 150, 0.5) ;">Modèle</th>
-            <th style="border: 2px solid rgba(0, 45, 150, 0.5) ;">Accuracy</th>
-            <th style="border: 2px solid rgba(0, 45, 150, 0.5) ;">Precision</th>
-            <th style="border: 2px solid rgba(0, 45, 150, 0.5) ;">F1 Score</th>
+            <th style="border: 2px solid rgba(0, 45, 150, 0.5) ;   background: royalblue;">Modèle</th>
+            <th style="border: 2px solid rgba(0, 45, 150, 0.5) ;   background: royalblue;">Accuracy</th>
+            <th style="border: 2px solid rgba(0, 45, 150, 0.5) ;   background: royalblue;">Precision</th>
+            <th style="border: 2px solid rgba(0, 45, 150, 0.5) ;   background: royalblue;">F1 Score</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td style="border: 2px solid rgba(0, 45, 150, 0.5) ;">K Plus Proches voisins</td>
-                <td style="border: 2px solid rgba(0, 45, 150, 0.5) ;">86.87%</td>
-                <td style="border: 2px solid rgba(0, 45, 150, 0.5) ;">confirmed : 78.77%<br>
+                <td style="border: 2px solid rgba(0, 45, 150, 0.5) ;   background: royalblue;">K Plus Proches voisins</td>
+                <td style="border: 2px solid rgba(0, 45, 150, 0.5) ;   background: royalblue;">86.87%</td>
+                <td style="border: 2px solid rgba(0, 45, 150, 0.5) ;   background: royalblue;">confirmed : 78.77%<br>
                     candidate : 82.42%<br>
                     false positive : 99.56%<br>
                     modèle : 86.92%</td>
-                <td style="border: 2px solid rgba(0, 45, 150, 0.5) ;">confirmed : 80.95%<br>
+                <td style="border: 2px solid rgba(0, 45, 150, 0.5) ;   background: royalblue;">confirmed : 80.95%<br>
                     candidate : 79.88%<br>
                     false positive : 99.71%<br>
                     modèle : 86.85%</td>
             </tr>
             <tr>
-                <td style="border: 2px solid rgba(0, 45, 150, 0.5) ;">Random Forest</td>
-                <td style="border: 2px solid rgba(0, 45, 150, 0.5) ;">92.91%</td>
-                <td style="border: 2px solid rgba(0, 45, 150, 0.5) ;">confirmed : 86.76%<br>
+                <td style="border: 2px solid rgba(0, 45, 150, 0.5) ;   background: royalblue;">Random Forest</td>
+                <td style="border: 2px solid rgba(0, 45, 150, 0.5) ;   background: royalblue;">92.91%</td>
+                <td style="border: 2px solid rgba(0, 45, 150, 0.5) ;   background: royalblue;">confirmed : 86.76%<br>
                     candidate : 92.04%<br>
                     false positive : 100.00%<br>
                     modèle : 92.93%</td>
-                <td style="border: 2px solid rgba(0, 45, 150, 0.5) ;">confirmed : 89.67%<br>
+                <td style="border: 2px solid rgba(0, 45, 150, 0.5) ;   background: royalblue;">confirmed : 89.67%<br>
                     candidate : 88.85%<br>
                     false positive : 100.00%<br>
                     modèle : 92.81%</td>
             </tr>
             <tr>
-                <td style="border: 2px solid rgba(0, 45, 150, 0.5) ;">SVM</td>
-                <td style="border: 2px solid rgba(0, 45, 150, 0.5) ;">80.48%</td>
-                <td style="border: 2px solid rgba(0, 45, 150, 0.5) ;">confirmed : 67.08%<br>
+                <td style="border: 2px solid rgba(0, 45, 150, 0.5) ;   background: royalblue;">SVM</td>
+                <td style="border: 2px solid rgba(0, 45, 150, 0.5) ;   background: royalblue;">80.48%</td>
+                <td style="border: 2px solid rgba(0, 45, 150, 0.5) ;   background: royalblue;">confirmed : 67.08%<br>
                     candidate : 77.12%<br>
                     false positive : 99.28%<br>
                     modèle : 81.16%</td>
-                <td style="border: 2px solid rgba(0, 45, 150, 0.5) ;">confirmed : 73.71%<br>
+                <td style="border: 2px solid rgba(0, 45, 150, 0.5) ;   background: royalblue;">confirmed : 73.71%<br>
                     candidate : 67.27%<br>
                     false positive : 99.64%<br>
                     modèle : 80.21%</td>
