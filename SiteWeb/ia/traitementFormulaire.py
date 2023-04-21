@@ -26,7 +26,7 @@ with open ('/var/www/html/starlearn/SiteWeb/ia/minMaxScaler.pkl', 'rb') as f:
 cols_to_scale = data.drop([2,3,4,5], axis=1).columns
 print("cols_to_scale",cols_to_scale, file=sys.stderr)
 
-data[cols_to_scale] = scaler.transform(data[cols_to_scale].values.reshape(-1,1))
+data[cols_to_scale] = scaler.transform(data[cols_to_scale])
 
 
 
